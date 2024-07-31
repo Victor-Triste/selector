@@ -290,14 +290,36 @@ const search = (event) => {
       optionLabel="name"
       class="border border-black rounded-lg"
     >
-      <template #item="slotProps">
-        <div class="flex items-center bg-red-500">
-          <div>{{ slotProps.item.code }}</div>
+      <template #option="slotProps">
+        <div class="flex items-center">
+          <img
+            :alt="slotProps.option.name"
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            :class="`flag flag-${slotProps.option.code.toLowerCase()} mr-2`"
+            style="width: 18px"
+          />
+          <div>{{ slotProps.option.name }}</div>
+        </div>
+      </template>
+
+      <template #chip="slotProps">
+        <div class="flex items-center">
+          <img
+            :alt="slotProps.value.name"
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            :class="`flag flag-${slotProps.value.code.toLowerCase()} mr-2`"
+            style="width: 18px"
+          />
+          <div class="mr-2">{{ slotProps.value.name }} - Custom Text</div>
+          <span
+            class="p-autocomplete-token-icon pi pi-times"
+            @click="removeItem(slotProps.value)"
+          ></span>
         </div>
       </template>
     </AutoComplete>
 
-    <AutoComplete
+    <!-- <AutoComplete
       v-model="selectedCountry"
       optionLabel="name"
       :suggestions="filteredCountries"
@@ -314,7 +336,7 @@ const search = (event) => {
           <div>{{ slotProps.option.name }}</div>
         </div>
       </template>
-    </AutoComplete>
+    </AutoComplete> -->
   </div>
 </template>
 
