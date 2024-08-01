@@ -1,0 +1,49 @@
+{
+  "paises": [
+    {
+      "nombre": "Canada",
+      "atributos": [
+        {
+          "nombre_atributo": "codigo_postal",
+          "valor": "H0H 0H0",
+          "requiere_dato_adicional": "si"
+        },
+        {
+          "nombre_atributo": "continente",
+          "valor": "América del Norte",
+          "requiere_dato_adicional": "no"
+        }
+      ]
+    },
+    {
+      "nombre": "USA",
+      "atributos": [
+        {
+          "nombre_atributo": "codigo_postal",
+          "valor": "20500",
+          "requiere_dato_adicional": "si"
+        },
+        {
+          "nombre_atributo": "continente",
+          "valor": "América del Norte",
+          "requiere_dato_adicional": "no"
+        }
+      ]
+    },
+    {
+      "nombre": "Mexico",
+      "atributos": [
+        {
+          "nombre_atributo": "codigo_postal",
+          "valor": "01000",
+          "requiere_dato_adicional": "si"
+        },
+        {
+          "nombre_atributo": "continente",
+          "valor": "América del Norte",
+          "requiere_dato_adicional": "no"
+        }
+      ]
+    }
+  ]
+}
